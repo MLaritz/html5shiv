@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>HTML5.HTML5Shiv</id>
+    <version>3.6.2</version>
+    <authors>Alexander Farkas</authors>
+    <description>The HTML5 Shiv enables use of HTML5 sectioning elements in legacy Internet Explorer and provides basic HTML5 styling for Internet Explorer 6-9, Safari 4.x (and iPhone 3.x), and Firefox 3.x.</description>
+    <projectUrl>https://github.com/MLaritz/html5shiv</projectUrl>
+  </metadata>
+  <files>
+    <file src="dist\html5shiv.js" target="Content\Scripts\html5shiv.min.js" />
+	<file src="src\html5shiv.js" target="Content\Scripts\html5shiv.js" />
+	<file src="dist\html5shiv-printshiv.js" target="Content\Scripts\html5shiv-printshiv.min.js" />
+	<file src="src\html5shiv-printshiv.js" target="Content\Scripts\html5shiv-printshiv.js" />
+  </files>
+</package>

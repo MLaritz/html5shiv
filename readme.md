@@ -1,12 +1,12 @@
-# The HTML5 Shiv
+# The HTML5 Shiv Nuget Package
 
-This is a fork of the original repo designed solely to be used to create an up-to-date NuGet package.
+This is a fork of the original repo designed solely to be used to create an up-to-date NuGet package.  The package can be found by searching for **HTML5.HTML5Shiv**.
 
 You can find more information on the HTML5 Shiv by visiting the [original repository](https://github.com/aFarkas/html5shiv). 
 
 ## NuGet Package
 
-A NuGet Package for use with Asp.Net.  This package includes both the html5shiv.js file, and the html5shiv-printshiv.js files.
+A NuGet Package for use with Asp.Net.  This package includes both the html5shiv.js file and the html5shiv-printshiv.js files (and minified version of both files).  The package will install these files in your Scripts folder.
 
 ### HTML5 Shiv
 
@@ -20,13 +20,11 @@ The HTML5 Shiv enables use of HTML5 sectioning elements in legacy Internet Explo
 ####`html5shiv-printshiv.js` 
 *  This includes all of the above, as well as a mechanism allowing HTML5 elements to be styled and contain children while being printed in IE 6-8.
 
-### Who can I get mad at now?
+### Creators of HTML5Shiv
 
 HTML5 Shiv is maintained by [Alexander Farkas](https://github.com/aFarkas/), [Jonathan Neal](https://twitter.com/jon_neal) and [Paul Irish](https://twitter.com/paul_irish), with many contributions from [John-David Dalton](https://twitter.com/jdalton). It is also distributed with [Modernizr](http://modernizr.com/), and the two google code projects, [html5shiv](https://code.google.com/p/html5shiv/) and [html5shim](https://code.google.com/p/html5shim/), maintained by [Remy Sharp](https://twitter.com/rem).
 
-If you have any issues in these implementations, you can report them here! :)
-
-For the full story of HTML5 Shiv and all of the people involved in making it, read [The Story of the HTML5 Shiv](http://paulirish.com/2011/the-history-of-the-html5-shiv/).
+For more information, head to the original repository for the [HTML5Shiv](https://github.com/aFarkas/html5shiv).
 
 ## Usage
 
@@ -34,7 +32,7 @@ Include the HTML5 shiv at the top of your `<head>` in a conditional comment afte
 
 ```html
 <!--[if lt IE 9]>
-	<script src="components/html5shiv/html5shiv.js"></script>
+	<script src="/Scripts/html5shiv.js"></script>
 <![endif]-->
 ```
 
@@ -119,25 +117,3 @@ fragment.appendChild(container);
 //fragment is shived so we can add HTML5 elements using `innerHTML`
 container.innerHTML = '<section>This is a section</section>';
 ```
-
-## HTML5 Shiv Known Issues and Limitations
-
-- The `shivMethods` option (overriding `document.createElement`) and the `html5.createElement` method create elements, which are not disconnected and have a parentNode (see also issue #64)
-- The cloneNode problem is currently not addressed by HTML5 Shiv. HTML5 elements can be dynamically created, but can't be cloned in all cases.
-- The printshiv version of HTML5 Shiv has to alter the print styles and the whole DOM for printing. In case of complex websites and or a lot of print styles this might cause performance and/or styling issues. A possible solution could be the [htc-branch](https://github.com/aFarkas/html5shiv/tree/iepp-htc) of HTML5 Shiv, which uses another technique to implement print styles for Internet Explorer 6-8.
-
-### What about the other HTML5 element projects?
-
-- The original conception and community collaboration story of the project is described at [The History of the HTML5 Shiv](http://paulirish.com/2011/the-history-of-the-html5-shiv/). 
-- [IEPP](https://code.google.com/p/ie-print-protector), by Jon Neal, addressed the printing fault of the original `html5shiv`. It was merged into `html5shiv`.
-- **Shimprove**, in April 2010, patched `cloneNode` and `createElement` was later merged into `html5shiv`
-- **innerShiv**, introduced in August 2010 by JD Barlett, addressed dynamically adding new HTML5 elements into the DOM. [jQuery added support](http://blog.jquery.com/2011/11/03/jquery-1-7-released/) that made innerShiv redundant and `html5shiv` addressed the same issues as well, so the project was completed.
-- The **html5shim** and **html5shiv** sites on Google Code are maintained by Remy Sharp and are identical distribution points of this `html5shiv` project.
-- **Modernizr** is developed by the same people as `html5shiv` and can include the latest version in any custom builds created at modernizr.com
-- This `html5shiv` repo now contains tests for all the edge cases pursued by the above libraries and has been extensively tested, both in development and production. 
-
-A [detailed changelog of html5shiv](https://github.com/aFarkas/html5shiv/wiki) is available.
-
-### Why is it called a *shiv*?
-
-The term **shiv** [originates](http://ejohn.org/blog/html5-shiv/) from [John Resig](https://github.com/jeresig), who was thought to have used the word for its slang meaning, *a sharp object used as a knife-like weapon*, intended for Internet Explorer. Truth be known, John probably intended to use the word [shim](http://en.wikipedia.org/wiki/Shim_(computing\)), which in computing means *an application compatibility workaround*. Rather than correct his mispelling, most developers familiar with Internet Explorer appreciated the visual imagery. And that, [kids](http://html5homi.es/), is [etymology](https://en.wikipedia.org/wiki/Etymology).
