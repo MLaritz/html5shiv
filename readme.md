@@ -1,5 +1,15 @@
 # The HTML5 Shiv
 
+This is a fork of the original repo designed solely to be used to create an up-to-date NuGet package.
+
+You can find more information on the HTML5 Shiv by visiting the [original repository](https://github.com/aFarkas/html5shiv). 
+
+## NuGet Package
+
+A NuGet Package for use with Asp.Net.  This package includes both the html5shiv.js file, and the html5shiv-printshiv.js files.
+
+### HTML5 Shiv
+
 The HTML5 Shiv enables use of HTML5 sectioning elements in legacy Internet Explorer and provides basic HTML5 styling for Internet Explorer 6-9, Safari 4.x (and iPhone 3.x), and Firefox 3.x.
 
 ### What do these files do?
@@ -18,13 +28,7 @@ If you have any issues in these implementations, you can report them here! :)
 
 For the full story of HTML5 Shiv and all of the people involved in making it, read [The Story of the HTML5 Shiv](http://paulirish.com/2011/the-history-of-the-html5-shiv/).
 
-## Installation
-
-###Using [Bower](http://bower.io/)
-
-`bower install html5shiv --save-dev`
-
-This will clone the latest version of the HTML5 shiv into the `components` directory at the root of your project and also create or update the file `bower.json` which specifies your projects dependencies.
+## Usage
 
 Include the HTML5 shiv at the top of your `<head>` in a conditional comment after any stylesheets.
 
@@ -33,10 +37,6 @@ Include the HTML5 shiv at the top of your `<head>` in a conditional comment afte
 	<script src="components/html5shiv/html5shiv.js"></script>
 <![endif]-->
 ```
-
-###Manual installation
-
-Download and extract the [latest zip package](https://github.com/aFarkas/html5shiv/archive/master.zip) from this repositiory and copy the two files `dist/html5shiv.js` and `dist/html5shiv-printshiv.js` into your project. Then include one of them into your `<head>` as above. 
 
 ## HTML5 Shiv API
 
