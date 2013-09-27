@@ -28,7 +28,7 @@ For more information, head to the original repository for the [HTML5Shiv](https:
 
 ## Usage
 
-Include the HTML5 shiv at the top of your `<head>` in a conditional comment after any stylesheets.
+Include the HTML5 shiv in the `<head>` of your page in a conditional comment and after any stylesheets.
 
 ```html
 <!--[if lt IE 9]>
